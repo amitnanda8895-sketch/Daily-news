@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Daily News</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <h1>📰 Daily News</h1>
+    <button id="adminButton">Admin</button>
+  </header>
+
+
+  <!-- CATEGORY MENU -->
+  <nav>
+    <button onclick="filterNews('All')">All</button>
+    <button onclick="filterNews('India')">India</button>
+    <button onclick="filterNews('Odisha')">Odisha</button>
+    <button onclick="filterNews('Sports')">Sports</button>
+    <button onclick="filterNews('Education')">Education</button>
+    <button onclick="filterNews('Technology')">Technology</button>
+  </nav>
+
+
+  <!-- HERO -->
+  <section class="hero">
+    <h2>Daily News</h2>
+    <p>Latest news and updates</p>
+  </section>
+
+
+  <!-- NEWS -->
+  <main id="newsContainer">
+
+    <article class="news-card">
+
+      <div class="news-content">
+
+        <small>ODISHA</small>
+
+        <h2>Welcome to Daily News</h2>
+
+        <p>
+          Your news website is ready.
+          News and photos will appear here.
+        </p>
+
+      </div>
+
+    </article>
+
+  </main>
+
+
+  <!-- ADMIN PANEL -->
+  <section id="adminPanel" class="admin-panel hidden">
+
+    <h2>🔐 Admin Login</h2>
+
+    <input
+      id="adminEmail"
+      type="email"
+      placeholder="Admin email"
+    >
+
+    <input
+      id="adminPassword"
+      type="password"
+      placeholder="Password"
+    >
+
+    <button id="loginButton">
+      Login
+    </button>
+
+    <p id="loginStatus"></p>
+
+
+    <!-- NEWS UPLOAD AREA -->
+    <div id="uploadArea" class="hidden">
+
+      <h2>📰 Upload News</h2>
+
+      <input
+        id="newsTitle"
+        type="text"
+        placeholder="News title"
+      >
+
+      <select id="newsCategory">
+        <option>India</option>
+        <option>Odisha</option>
+        <option>Sports</option>
+        <option>Education</option>
+        <option>Technology</option>
+      </select>
+
+      <textarea
+        id="newsDescription"
+        placeholder="Write news details..."
+      ></textarea>
+
+      <input
+        id="newsPhoto"
+        type="file"
+        accept="image/*"
+      >
+
+      <button id="uploadButton">
+        Upload News
+      </button>
+
+      <p id="uploadStatus"></p>
+
+    </div>
+
+  </section>
+
+
+  <!-- JAVASCRIPT -->
+  <script type="module" src="script.js"></script>
+
+</body>
+</html>
